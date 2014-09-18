@@ -1,12 +1,14 @@
 /*---
-中大宿網防爆精靈 v1.0.0 by BaconBao (http://baconbao.com)
+中大宿網防爆精靈 v1.0.1 by BaconBao (http://baconbao.com)
 ---*/
 
 var interval;
 var min;
+var fixcount = 0;
 run();
 
 function run(){
+	fixcount++;
 	if(localStorage["setting-interval"]==null){
 		set2default();
 	}
@@ -24,8 +26,9 @@ function run(){
 	}else{
 		getData();
 	}
-	if(min<=0||!min) clearInterval(interval);
+	clearInterval(interval);
 	interval = setInterval(run, min*60*1000);
+	if(fixcount>5) chrome.extension.getBackgroundPage().window.location.reload();
 }
 
 function getData(){
@@ -50,7 +53,7 @@ function getData(){
 						{
 						  type: "basic",
 						  title: "【小心】宿網用量達到警戒值！",
-						  message: "宿網用量已經到達您的警戒值，快要爆炸囉！",
+						  message: "宿網校外上傳量已經到達您的警戒值，快要爆炸囉！",
 						  iconUrl: "img/NCU_AntiBomb_sos_logo.png"
 						},function(){}
 					)

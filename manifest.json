@@ -14,5 +14,5 @@
       "default_icon": "img/NCU_AntiBomb_logo.png"
    },
    "permissions": [ "tabs", "notifications" , "https://uncia.cc.ncu.edu.tw/dormnet/*"],
-   "version": "1.0.0"
+   "version": "1.0.1"
 }

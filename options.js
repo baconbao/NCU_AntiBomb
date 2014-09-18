@@ -1,5 +1,5 @@
 /*---
-中大宿網防爆精靈 v1.0.0 by BaconBao (http://baconbao.com)
+中大宿網防爆精靈 v1.0.1 by BaconBao (http://baconbao.com)
 ---*/
 
 function set2default(){
@@ -39,7 +39,7 @@ function ifShowMsg(){
 		$('#msg').hide();
 	}else{
 		$('#msg').show();
-		$('#msg').html('您最近一次查詢的24小時宿網上傳總量為 <b>'+localStorage["record"]+'GB</b>');
+		$('#msg').html('您最近一次查詢的24小時宿網校外上傳總量為 <b>'+localStorage["record"]+'GB</b>');
 		$('#msg').css('margin-bottom','30px');	
 	}
 }
