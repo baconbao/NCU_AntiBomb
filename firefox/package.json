@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "icon": "data/img/NCU_AntiBomb_logo.png",
+  "name": "ncu_antibomb",
+  "fullName": "中央大學宿網防爆精靈",
+  "id": "ncu-antibomb@baconbao",
+  "description": "定時監控您的中大宿網上傳量，3GB危險接近時警示，希望能讓同學們遠離爆網之憂。",
+  "lib": "lib",
+  "main": "main",
+  "author": "BaconBao",
+  "url": "http://baconbao.blogspot.com",
+  "license": "MPL 2.0",
+	"dependencies": ["api-utils", "addon-kit"],
+	"permissions": {
+	    "cross-domain-content": ["https://uncia.cc.ncu.edu.tw/dormnet/"]
+	}
+}

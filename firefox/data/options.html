@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+ <head>
+  <title>設定 - 中大宿網防爆精靈</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="BaconBao">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <link rel="stylesheet" type="text/css" href="lib/css/semantic.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 98%;
+      background: linear-gradient(rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.01) 95%) no-repeat scroll 0 0%, url("img/white_wall_hash.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    }
+    body {
+      padding-top: 20px;
+    }
+    h4 {
+      padding-bottom: 10px;
+    }
+    #mainbox {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    #infobox {
+      color: #3CB917;
+    }
+    #v0a, #v0b {
+      width: 35px;
+    }
+    #author {
+      color: #777;
+      padding-left: 7px;
+    }
+    #subtit1, #subtit2 {
+      display: block;
+      padding-bottom: 12px;
+    }
+    #msg {
+      margin-top: -25px;
+      font-family: '微軟正黑體', 'Microsoft JhengHei';
+    }
+    .range-input {
+      width: 400px;
+    }
+    .valuespan {
+      margin-left: 15px;
+    }
+  </style>
+ </head>
+ <body>
+  <div id="mainbox">
+    <div id="msg" class="ui small message">
+    </div>
+    <h1 style="display:inline;"><img src="img/NCU_AntiBomb_logo.png" style="width:27px;" /> 中大宿網防爆精靈</h1><small id="author"> by BaconBao</small>
+    <div class="ui divider"></div>
+    <br />
+    <section>
+      <h4>宿網 IP</h4>
+      140 . 115 . <input id="v0a" class="ipset" type="text" name="ipaddress_a" value="" /> . <input id="v0b" class="ipset" type="text" name="ipaddress_b" value="" />
+    </section>
+    <br />
+    <div class="ui divider"></div>
+    <div id="detailsetting">
+    <section>
+      <h4 id="tit1">查詢間隔(分)</h4>
+      <small id="subtit1">說明：多久查詢一次您最近24小時的宿網校外上傳量。提醒您，間隔越低會相對增加資源的使用與網路的下載量。</small>
+      <input id="v1" type="range" class="range-input" min="5" max="1440" step="1" tarSpan="#s1" /><span id="s1" class="valuespan"></span>
+    </section>
+    <br />
+    <section>
+      <h4 id="tit2">警戒值(GB)</h4>
+      <small id="subtit2">說明：每次查詢的最近24小時宿網校外上傳量達到多少時警示您。</small>
+      <input id="v2" type="range" class="range-input" min="0.1" max="2.9" step="0.01" tarSpan="#s2" /><span id="s2" class="valuespan"></span>
+    </section>
+    </div>
+    <br />
+    <br />
+    <div id="btn-save" class="ui button green"><i class="icon check"></i> 儲存設定</div> <div id="btn-again" class="ui button teal small"><i class="icon remove"></i> 重新整理</div> <div id="btn-reboot" class="ui button orange small"><i class="icon exclamation"></i> 回復預設</div>
+    <div id="infobox"></div>
+  </div>
+ </body>
+</html>
