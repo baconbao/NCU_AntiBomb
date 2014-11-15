@@ -1,7 +1,6 @@
 中大宿網防爆精靈
 ---------------------------------------
-‧ Install on [Chrome Store](https://chrome.google.com/webstore/detail/eogcoeaplomkkmobbhhkpjonelgijiki)
-
+‧ Install on [Chrome Store](https://chrome.google.com/webstore/detail/eogcoeaplomkkmobbhhkpjonelgijiki)</br>
 ‧ Install on [Firefox Add-on](https://addons.mozilla.org/firefox/addon/中央大學宿網防爆精靈/)
 
 ![中大宿網防爆精靈](https://lh4.googleusercontent.com/4wmOJTzQGMZQTUJdzzFbOJ6KwfUfBMRieWuE_vW-sC1uUtToXBqO23jruhS-JeVATwC3chMLAQ=s100-h100-e365-rw)
