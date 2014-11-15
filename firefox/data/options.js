@@ -69,8 +69,8 @@ self.port.on('options', function (msg) {
 			var tmpIpB = parseInt($('#v0b').val());
 			if(tmpIpA=='NaN') tmpIpA = 0;
 			if(tmpIpB=='NaN') tmpIpB = 0;
-			var tmpInter = $('#v1').val();
-			var tmpMax = $('#v2').val();
+			var tmpInter = parseInt($('#v1').val());
+			var tmpMax = parseFloat($('#v2').val());
 			$('#infobox').text('完成！');
 			self.port.emit('settingchange', {ipA: tmpIpA, ipB: tmpIpB, inter: tmpInter, maxnum: tmpMax});
 		});

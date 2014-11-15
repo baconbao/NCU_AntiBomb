@@ -44,10 +44,10 @@ function openOptions(){
         });
         worker.port.emit('options', {ipA: ss.storage.ipa, ipB: ss.storage.ipb, inter: ss.storage.inter, maxnum: ss.storage.maxnum, record: ss.storage.record});
         worker.port.on('settingchange', function (rd) {
-            ss.storage.ipa = rd.ipA;
-            ss.storage.ipb = rd.ipB;
-            ss.storage.inter = rd.inter;
-            ss.storage.maxnum = rd.maxnum;
+            ss.storage.ipa = parseInt(rd.ipA);
+            ss.storage.ipb = parseInt(rd.ipB);
+            ss.storage.inter = parseInt(rd.inter);
+            ss.storage.maxnum = parseFloat(rd.maxnum);
             timers.clearInterval(timerID);
             updateInterval = 1000 * 60 * ss.storage.inter;
             timerID = timers.setInterval(update, updateInterval);
@@ -84,7 +84,10 @@ function update() {
             title: "初次使用請設定您的宿網IP！",
             text: "點擊本工具按鈕即可進入設定。",
             data: "點擊本工具按鈕即可進入設定。",
-            iconURL: data.url('img/NCU_AntiBomb_logo.png')
+            iconURL: data.url('img/NCU_AntiBomb_logo.png'),
+            onClick: function () {
+                before_openOptions();
+            }
         });
     }else{
         Request({
@@ -110,6 +113,7 @@ let worker = pageWorker.Page({
 });
 
 worker.port.on('fetched-count', function (count) {
+    count = parseFloat(count);
     if(count.toString()=='NaN'){
         tbb.tooltiptext = '中大宿網防爆精靈：資料有誤...';
         tbb.badge = {
